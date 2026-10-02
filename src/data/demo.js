@@ -19,6 +19,7 @@ export const demoGroups = [
     totalExpenses: 1840.0,
     yourBalance: -124.5,
     category: 'Travel',
+    icon: '✈️',
     updatedAt: '2026-09-28T10:00:00Z',
   },
   {
@@ -28,6 +29,7 @@ export const demoGroups = [
     totalExpenses: 3200.0,
     yourBalance: 210.0,
     category: 'Home',
+    icon: '🏠',
     updatedAt: '2026-09-30T08:30:00Z',
   },
   {
@@ -37,6 +39,7 @@ export const demoGroups = [
     totalExpenses: 480.0,
     yourBalance: 35.0,
     category: 'Food',
+    icon: '🍜',
     updatedAt: '2026-10-01T13:00:00Z',
   },
 ]
@@ -48,6 +51,7 @@ export const demoExpenses = [
     amount: 620.0,
     paidBy: 'Alex Morgan',
     group: 'Barcelona Trip 🇪🇸',
+    category: 'Travel',
     date: '2026-09-25T18:00:00Z',
     splitBetween: 5,
     yourShare: 124.0,
@@ -58,6 +62,7 @@ export const demoExpenses = [
     amount: 2400.0,
     paidBy: 'Jordan Lee',
     group: 'Apartment — Downtown',
+    category: 'Housing',
     date: '2026-10-01T09:00:00Z',
     splitBetween: 3,
     yourShare: 800.0,
@@ -68,6 +73,7 @@ export const demoExpenses = [
     amount: 134.5,
     paidBy: 'Alex Morgan',
     group: 'Apartment — Downtown',
+    category: 'Food',
     date: '2026-10-01T14:30:00Z',
     splitBetween: 3,
     yourShare: 44.83,
@@ -78,6 +84,7 @@ export const demoExpenses = [
     amount: 210.0,
     paidBy: 'Sam Rivera',
     group: 'Friday Lunch Crew',
+    category: 'Food',
     date: '2026-09-27T12:30:00Z',
     splitBetween: 6,
     yourShare: 35.0,
@@ -88,6 +95,7 @@ export const demoExpenses = [
     amount: 890.0,
     paidBy: 'Taylor Nguyen',
     group: 'Barcelona Trip 🇪🇸',
+    category: 'Travel',
     date: '2026-09-20T07:00:00Z',
     splitBetween: 5,
     yourShare: 178.0,
@@ -99,4 +107,100 @@ export const demoStats = {
   youOwe: 302.5,
   youAreOwed: 423.0,
   activeGroups: 3,
+  monthlySpend: 1181.83,
+  settledThisMonth: 2,
 }
+
+/**
+ * Recent activity feed — mixed event types for the activity timeline.
+ */
+export const demoActivity = [
+  {
+    id: 'a1',
+    type: 'expense_added',
+    actor: 'Jordan Lee',
+    actorInitials: 'JL',
+    description: 'added October Rent',
+    group: 'Apartment — Downtown',
+    amount: 2400.0,
+    yourShare: 800.0,
+    timestamp: '2026-10-01T09:00:00Z',
+  },
+  {
+    id: 'a2',
+    type: 'expense_added',
+    actor: 'You',
+    actorInitials: 'AM',
+    description: 'added Groceries — Whole Foods',
+    group: 'Apartment — Downtown',
+    amount: 134.5,
+    yourShare: 44.83,
+    timestamp: '2026-10-01T14:30:00Z',
+  },
+  {
+    id: 'a3',
+    type: 'payment',
+    actor: 'Sam Rivera',
+    actorInitials: 'SR',
+    description: 'paid you back',
+    group: 'Friday Lunch Crew',
+    amount: 35.0,
+    yourShare: 35.0,
+    timestamp: '2026-09-28T11:00:00Z',
+  },
+  {
+    id: 'a4',
+    type: 'expense_added',
+    actor: 'You',
+    actorInitials: 'AM',
+    description: 'added Hotel — Hotel Arts Barcelona',
+    group: 'Barcelona Trip 🇪🇸',
+    amount: 620.0,
+    yourShare: 124.0,
+    timestamp: '2026-09-25T18:00:00Z',
+  },
+  {
+    id: 'a5',
+    type: 'group_joined',
+    actor: 'Taylor Nguyen',
+    actorInitials: 'TN',
+    description: 'joined the group',
+    group: 'Barcelona Trip 🇪🇸',
+    amount: null,
+    yourShare: null,
+    timestamp: '2026-09-18T08:00:00Z',
+  },
+  {
+    id: 'a6',
+    type: 'payment',
+    actor: 'You',
+    actorInitials: 'AM',
+    description: 'settled up with Jordan',
+    group: 'Apartment — Downtown',
+    amount: 400.0,
+    yourShare: 400.0,
+    timestamp: '2026-09-15T16:00:00Z',
+  },
+]
+
+/**
+ * Monthly spending data for the chart.
+ */
+export const demoSpending = [
+  { month: 'May',  amount: 320,  you: 180 },
+  { month: 'Jun',  amount: 540,  you: 210 },
+  { month: 'Jul',  amount: 280,  you: 140 },
+  { month: 'Aug',  amount: 690,  you: 320 },
+  { month: 'Sep',  amount: 1180, you: 480 },
+  { month: 'Oct',  amount: 420,  you: 210 },
+]
+
+/**
+ * Category breakdown for the spending pie/donut.
+ */
+export const demoCategories = [
+  { name: 'Travel',  value: 1182, color: '#6366f1' },
+  { name: 'Housing', value: 800,  color: '#8b5cf6' },
+  { name: 'Food',    value: 280,  color: '#10b981' },
+  { name: 'Other',   value: 145,  color: '#f59e0b' },
+]
